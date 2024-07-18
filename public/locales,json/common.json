@@ -1,0 +1,25 @@
+{
+    "en": {
+      "title": "YOUTH BALLET",
+      "about": "About",
+      "photos": "Photos",
+      "videos": "Videos",
+      "contact": "Contact",
+      "email": "Email",
+      "send": "Send",
+      "play_video": "Play Video",
+      "scroll": "Scroll"
+    },
+    "fr": {
+      "title": "JEUNE BALLET",
+      "about": "À propos",
+      "photos": "Photos",
+      "videos": "Vidéos",
+      "contact": "Contact",
+      "email": "Email",
+      "send": "Envoyer",
+      "play_video": "Lire la vidéo",
+      "scroll": "Faire défiler"
+    }
+  }
+  
