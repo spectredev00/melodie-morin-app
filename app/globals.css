@@ -8,13 +8,42 @@ body {
   scroll-behavior: smooth;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+header {
+  position: fixed;
+  z-index: 2;
+
+  width: 90%;
+  margin: 0 auto;
+}
+
+header ul {
+  display: flex;
+  justify-content: flex-end;
+}
+
+li {
+  list-style: none;
+}
+
+.lang {
+background: none;
+border: none;
+color: #fff;
+cursor: pointer;
+}
+
 
 
 
 .hero {
   height: 100vh;
  
-  background: url('/images/hero.png') no-repeat center center/contain;
+  background: url('/images/hero.png') no-repeat center center/container;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -33,6 +62,7 @@ body {
 
 .hero-content {
   z-index: 1;
+  margin-top: -3em;
 }
 
 .logo {
@@ -82,7 +112,7 @@ body {
 .social a {
   color: #fff;
   text-decoration: none;
-  font-size: 1.5em;
+
   font-weight: 200 !important;
   font-family: "Monserrat";
 }
@@ -190,4 +220,12 @@ form button:hover {
 
 .about-content p {
   font-weight: 200;
+}
+
+.contact {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2em;
 }

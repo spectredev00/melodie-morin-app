@@ -1,12 +1,24 @@
 {
     "photos": [
+        {
+            "src": "/images/image.png",
+            "alt": "Dance pose 3"
+          },
       {
-        "src": "/images/photo1.jpg",
-        "alt": "Dance pose 1"
+        "src": "/images/image.png",
+        "alt": "Dance pose 3"
       },
       {
-        "src": "/images/photo2.jpg",
-        "alt": "Dance pose 2"
+        "src": "/images/image.png",
+        "alt": "Dance pose 3"
+      },
+      {
+        "src": "/images/image.png",
+        "alt": "Dance pose 3"
+      },
+      {
+        "src": "/images/image.png",
+        "alt": "Dance pose 3"
       },
       {
         "src": "/images/image.png",
@@ -14,14 +26,8 @@
       }
     ],
     "videos": [
-      {
-        "src": "/images/video1.jpg",
-        "alt": "Video thumbnail 1"
-      },
-      {
-        "src": "/images/image.png",
-        "alt": "Video thumbnail 2"
-      }
+     
+     
     ]
   }
   

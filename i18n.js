@@ -14,8 +14,8 @@ const resources = {
 };
 
 i18n
-  .use(LanguageDetector) // Detects the user's language
-  .use(initReactI18next) // Passes i18n down to react-i18next
+  .use(LanguageDetector)
+  .use(initReactI18next)
   .init({
     resources,
     fallbackLng: 'fr',
@@ -25,7 +25,7 @@ i18n
       caches: ['cookie']
     },
     interpolation: {
-      escapeValue: false // React already does escaping
+      escapeValue: false
     }
   });
 
