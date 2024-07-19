@@ -43,7 +43,7 @@ cursor: pointer;
 .hero {
   height: 100vh;
  
-  background: url('/images/hero.png') no-repeat center center/container;
+  background: url('/images/img4.JPG') no-repeat center center/cover;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -57,7 +57,7 @@ cursor: pointer;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5); /* Overlay */
+  background: rgba(0, 0, 0, 0.1); /* Overlay */
 }
 
 .hero-content {
@@ -67,6 +67,7 @@ cursor: pointer;
 
 .logo {
   width: 100%;
+  gap: 3em;
   font-size: 8em;
   font-weight: bold;
   margin-bottom: 2rem;
