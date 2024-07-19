@@ -1,3 +1,5 @@
+/* globals.css */
+
 @import 'animate.css/animate.min.css';
 
 body {
@@ -16,7 +18,6 @@ a {
 header {
   position: fixed;
   z-index: 2;
-
   width: 90%;
   margin: 0 auto;
 }
@@ -31,18 +32,14 @@ li {
 }
 
 .lang {
-background: none;
-border: none;
-color: #fff;
-cursor: pointer;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
 }
-
-
-
 
 .hero {
   height: 100vh;
- 
   background: url('/images/img4.JPG') no-repeat center bottom/cover;
   display: flex;
   justify-content: center;
@@ -75,15 +72,12 @@ cursor: pointer;
   justify-content: space-between;
 }
 
-
-
 .play-button {
   background: none;
   border: 1px solid #8f8f8f;
   height: 80px;
   width: 80px;
   border-radius: 50%;
-
   padding: 0.5rem;
   cursor: pointer;
   transition: transform 0.5s ease-in-out, background-color 0.3s ease-in-out;
@@ -106,21 +100,24 @@ cursor: pointer;
 .social {
   display: flex;
   justify-content: space-between;
-
   gap: 1rem;
 }
 
 .social a {
   color: #fff;
   text-decoration: none;
-background-color: #000000;
-padding: .5em;
+  padding: .5em .8em;
   font-weight: 200 !important;
   font-family: "Monserrat";
+  border: 1px solid #8f8f8f;
+  transition: transform 0.5s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.social a:hover {
+  border-color: #f3f3f3;
 }
 
 .scroll-button {
-
   animation: bounce 2s infinite;
 }
 
@@ -142,20 +139,22 @@ padding: .5em;
 }
 
 .gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-  gap: 1rem;
-  flex-wrap: wrap;
+  display: flex;
+  margin-left: -30px; /* gutter size offset */
+  width: auto;
 }
 
-.gallery img {
-  width: 30%;
-  height: auto;
-  transition: transform 0.3s ease-in-out;
+.gallery-column {
+  padding-left: 30px; /* gutter size */
+  background-clip: padding-box;
 }
 
-.gallery img:hover {
-  transform: scale(1.05);
+.gallery-item {
+  margin-bottom: 30px;
+}
+
+.gallery-item img {
+  object-fit: cover;
 }
 
 form {
@@ -206,7 +205,6 @@ form button:hover {
     width: 100%;
   }
 }
-
 
 /* about */
 

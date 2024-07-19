@@ -2,9 +2,9 @@
 
 import { useEffect, useState } from 'react';
 import 'animate.css';
-import Image from 'next/image';
 import Layout from './layout';
 import Masonry from 'react-masonry-css';
+import Image from 'next/image';
 
 export default function Home() {
   const [photos, setPhotos] = useState([]);
@@ -19,13 +19,12 @@ export default function Home() {
       });
   }, []);
 
-
-  const breakpoint = {
+  const breakpointColumnsObj = {
     default: 4,
-    1100:4,
-    700: 3,
-    500: 2 
-  }
+    1100: 3,
+    700: 2,
+    500: 1
+  };
 
   return (
     <>
@@ -66,15 +65,17 @@ export default function Home() {
           </p>
         </div>
       </section>
-      <section id="photos">
+      <section id="photos" className="section">
         <Masonry
-        breakpointCols={breakpoint}
-        className='gallery'>
-   
+          breakpointCols={breakpointColumnsObj}
+          className="gallery"
+          columnClassName="gallery-column">
           {photos.map((photo, index) => (
-            <Image key={index} src={photo.src} alt={photo.alt} width={500} height={800} />
+            <div key={index} className="gallery-item">
+              <Image src={photo.src} alt={photo.alt} width={400} height={500} />
+            </div>
           ))}
-    </Masonry>
+        </Masonry>
       </section>
       <footer id="contact" className='contact'>
         <a href="mailto:lecouriel@gmail.com">lecouriel@gmail.com</a>
