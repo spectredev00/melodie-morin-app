@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import 'animate.css';
 import Image from 'next/image';
 import Layout from './layout';
+import Masonry from 'react-masonry-css';
 
 export default function Home() {
   const [photos, setPhotos] = useState([]);
@@ -17,6 +18,14 @@ export default function Home() {
         setVideos(data.videos);
       });
   }, []);
+
+
+  const breakpoint = {
+    default: 4,
+    1100:4,
+    700: 3,
+    500: 2 
+  }
 
   return (
     <>
@@ -58,19 +67,14 @@ export default function Home() {
         </div>
       </section>
       <section id="photos">
-        <div className="gallery">
+        <Masonry
+        breakpointCols={breakpoint}
+        className='gallery'>
+   
           {photos.map((photo, index) => (
-            <Image key={index} src={photo.src} alt={photo.alt} width={500} height={500} />
+            <Image key={index} src={photo.src} alt={photo.alt} width={500} height={800} />
           ))}
-        </div>
-      </section>
-      <section id="videos" className="section">
-        <h2>Videos</h2>
-        <div className="gallery">
-          {videos.map((video, index) => (
-            <Image key={index} src={video.src} alt={video.alt} width={500} height={500} />
-          ))}
-        </div>
+    </Masonry>
       </section>
       <footer id="contact" className='contact'>
         <a href="mailto:lecouriel@gmail.com">lecouriel@gmail.com</a>

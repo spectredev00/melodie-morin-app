@@ -43,7 +43,7 @@ cursor: pointer;
 .hero {
   height: 100vh;
  
-  background: url('/images/img4.JPG') no-repeat center center/cover;
+  background: url('/images/img4.JPG') no-repeat center bottom/cover;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -113,7 +113,8 @@ cursor: pointer;
 .social a {
   color: #fff;
   text-decoration: none;
-
+background-color: #000000;
+padding: .5em;
   font-weight: 200 !important;
   font-family: "Monserrat";
 }
@@ -141,8 +142,8 @@ cursor: pointer;
 }
 
 .gallery {
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   gap: 1rem;
   flex-wrap: wrap;
 }
