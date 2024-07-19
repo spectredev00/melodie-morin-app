@@ -52,16 +52,7 @@ export default function Home() {
         <div className='about-content'>
           <h2>About</h2>
           <p>
-            What is Lorem Ipsum? <br/>
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-            <br/><br/>
-            Why do we use it? <br/>
-            It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using &quot;Content here, content here&quot;, making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for &quot;lorem ipsum&quot; will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
-            <br/><br/>
-            Where does it come from? <br/>
-            Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of &quot;de Finibus Bonorum et Malorum&quot; (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, &quot;Lorem ipsum dolor sit amet..&quot;, comes from a line in section 1.10.32.
-            <br/><br/>
-            The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from &quot;de Finibus Bonorum et Malorum&quot; by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
+            En attente du texte<br/>
           </p>
         </div>
       </section>
@@ -72,13 +63,16 @@ export default function Home() {
           columnClassName="gallery-column">
           {photos.map((photo, index) => (
             <div key={index} className="gallery-item">
-              <Image src={photo.src} alt={photo.alt} width={400} height={500} />
+              <Image src={photo.src} alt="Mélodie Morin Danseuse" width={400} height={500} />
             </div>
           ))}
         </Masonry>
       </section>
       <footer id="contact" className='contact'>
-        <a href="mailto:lecouriel@gmail.com">lecouriel@gmail.com</a>
+        <p>Mélodie Morin</p>
+        <br />
+        <a href="mailto:lecouriel@gmail.com">melodiemorin@gmail.com</a>
+        <br />
       </footer>
     </>
   );
