@@ -1,19 +1,19 @@
 {
     "photos": [
         {
-            "src": "/images/image.png",
+            "src": "/images/img1.jpg",
             "alt": "Dance pose 3"
           },
       {
-        "src": "/images/image.png",
+        "src": "/images/img2.jpg",
         "alt": "Dance pose 3"
       },
       {
-        "src": "/images/image.png",
+        "src": "/images/img3.jpg",
         "alt": "Dance pose 3"
       },
       {
-        "src": "/images/image.png",
+        "src": "/images/img4.jpg",
         "alt": "Dance pose 3"
       },
       {
