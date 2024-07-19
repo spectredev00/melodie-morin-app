@@ -10,15 +10,7 @@ interface LayoutProps {
 }
 
 export default function Layout({ children }: LayoutProps) {
-  const pathname = usePathname();
-  const searchParams = useSearchParams();
-
-  const changeLanguage = (lang: string) => {
-    const currentParams = new URLSearchParams(Array.from(searchParams.entries()));
-    currentParams.set('lng', lang);
-    const newPath = `${pathname}?${currentParams.toString()}`;
-    window.location.href = newPath;
-  };
+ 
 
   return (
     <html lang="fr">
