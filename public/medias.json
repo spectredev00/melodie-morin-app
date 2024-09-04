@@ -1,27 +1,27 @@
 {
     "photos": [
         {
-            "src": "/images/img1.jpg",
+            "img": "/images/img1.jpg",
             "alt": "Dance pose 3"
           },
       {
-        "src": "/images/img2.jpg",
+        "img": "/images/img2.jpg",
         "alt": "Dance pose 3"
       },
       {
-        "src": "/images/img3.jpg",
+        "img": "/images/img3.jpg",
         "alt": "Dance pose 3"
       },
       {
-        "src": "/images/img4.jpg",
+        "img": "/images/img4.jpg",
         "alt": "Dance pose 3"
       },
       {
-        "src": "/images/image.png",
+        "img": "/images/image.png",
         "alt": "Dance pose 3"
       },
       {
-        "src": "/images/image.png",
+        "img": "/images/image.png",
         "alt": "Dance pose 3"
       }
     ],

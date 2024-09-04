@@ -28,7 +28,7 @@ export default function Home() {
 
   return (
     <>
-      <section className="hero">
+    {/*   <section className="hero">
         <div className="hero-content">
           <div className="logo">
             <div className="animate__animated animate__fadeInLeft">MÉLODIE</div>
@@ -63,11 +63,11 @@ export default function Home() {
           columnClassName="gallery-column">
           {photos.map((photo, index) => (
             <div key={index} className="gallery-item">
-              <Image src={photo.src} alt="Mélodie Morin Danseuse" width={400} height={500} />
+              <Image src={photo.img} alt="Mélodie Morin Danseuse" width={400} height={500} />
             </div>
           ))}
         </Masonry>
-      </section>
+      </section> */}
       <footer id="contact" className='contact'>
         <p>Mélodie Morin</p>
         <br />
