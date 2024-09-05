@@ -1,3 +1,5 @@
+
+
 "use client";
 
 import { useEffect, useState } from 'react';
@@ -5,6 +7,7 @@ import 'animate.css';
 import Layout from './layout';
 import Masonry from 'react-masonry-css';
 import Image from 'next/image';
+import Head from 'next/head'; // Import de Head pour gérer le SEO
 
 export default function Home() {
   const [photos, setPhotos] = useState([]);
@@ -28,7 +31,14 @@ export default function Home() {
 
   return (
     <>
-    {/*   <section className="hero">
+      {/* Ajout du composant Head pour les balises meta */}
+      <Head>
+        <title>Mélodie Morin - Danseuse et Photographe</title>
+        <meta name="description" content="Découvrez l'univers de Mélodie Morin, danseuse et photographe passionnée. Explorez ses photos et vidéos." />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="canonical" href="https://ton-site.com" />
+      </Head>
+   {/*   <section className="hero">
         <div className="hero-content">
           <div className="logo">
             <div className="animate__animated animate__fadeInLeft">MÉLODIE</div>
@@ -68,12 +78,8 @@ export default function Home() {
           ))}
         </Masonry>
       </section> */}
-      <footer id="contact" className='contact'>
-        <p>Mélodie Morin</p>
-        <br />
-        <a href="mailto:lecouriel@gmail.com">melodiemorin@gmail.com</a>
-        <br />
-      </footer>
+    
     </>
   );
 }
+
