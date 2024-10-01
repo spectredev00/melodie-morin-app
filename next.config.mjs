@@ -1,6 +1,6 @@
-// next.config.mjs
-
 export default {
-  reactStrictMode: true,
-  // Ajoutez d'autres configurations nécessaires ici
+  i18n: {
+    locales: ["fr", "ht"], // Les langues disponibles
+    defaultLocale: "fr", // Langue par défaut
+  },
 };
