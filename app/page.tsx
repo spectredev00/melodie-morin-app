@@ -63,22 +63,26 @@ export default function Home() {
       <VideoSection />
       <AboutSection />
       <Prix />
-
+      <Gallery photos={photos} />
       <section id="about" className="about">
-        <div className="about__container">
-          <div className="about__illustration"></div>
-          <div className="about__second">
+
+
             <p className="about__paragraph animate__animated animate__fadeInUp animate__delay-1s">
               {t.about1}
             </p>
             <p className="about__paragraph animate__animated animate__fadeInUp animate__delay-1s">
               {t.about2}
             </p>
-          </div>
-        </div>
+   
       </section>
 
-      <Gallery photos={photos} />
+      <section
+  className="melodie-studio fadeUp"
+  style={{ backgroundImage: "url('/images/studio.jpg')" }}
+>
+</section>
+
+
     </>
   );
 }

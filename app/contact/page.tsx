@@ -22,7 +22,7 @@ const Contact = () => {
     },
     fr: {
       title: "Contactez Mélo Morin",
-      description: "Pour me contacter, envoyez-moi un email à melomorin3022@hotmail.com",
+      description: "Pour me contacter, envoyez-moi un courriel à melomorin3022@hotmail.com",
       seoTitle: "Contactez Mélo Morin",
       seoDescription: "Pour me contacter, envoyez-moi un email à melomorin3022@hotmail.com",
       emailLabel: "Pour me contacter, envoyez-moi un email :",

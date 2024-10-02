@@ -88,11 +88,11 @@ const Prix = () => {
         </div>
         {/* Texte avec liste des prix */}
         <div className="about__text">
-          <h2 className="about__title">{t.title}</h2>
-          <div className="divider"></div>
+          <h2 className="about__title fadeLeft delay-1">{t.title}</h2>
+          <div className="divider fadeLeft delay-2"></div>
           <ul className="prix__list">
             {t.prixList.map((prix, index) => (
-              <li key={index} className="prix__item">
+              <li key={index} className="prix__item fadeLeft delay-3">
                 <span className="prix__icon">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -109,11 +109,12 @@ const Prix = () => {
                 </span>
               </li>
             ))}
-            <li className="prix__item">
-              <span className="prix__details">
+     
+            <p className="prix__item fadeLeft delay-5">
+
                 {t.description}
-              </span>
-            </li>
+
+            </p>
           </ul>
         </div>
       </div>

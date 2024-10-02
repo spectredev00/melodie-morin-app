@@ -1,6 +1,13 @@
+// next.config.mjs
 export default {
-  i18n: {
-    locales: ["fr", "en"], // Les langues disponibles
-    defaultLocale: "en", // Langue par défaut
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'res.cloudinary.com',
+        port: '',
+        pathname: '/**',
+      },
+    ],
   },
 };

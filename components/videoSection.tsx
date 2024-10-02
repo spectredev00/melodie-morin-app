@@ -21,10 +21,10 @@ const VideoSection = () => {
               width={1200}
               height={900}
               objectFit="contain"
-              className="video-section__thumbnail animate__animated animate__fadeInUp"
+              className="video-section__thumbnail fadeUp "
             />
             <button
-              className="video-section__play-button"
+              className="video-section__play-button fadeIn delay-5"
               onClick={handlePlayClick}
             >
               <svg
