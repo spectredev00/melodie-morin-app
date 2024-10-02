@@ -1,7 +1,7 @@
 {
   "photos": [
     {
-      "img": "/images/img13.jpg",
+      "img": "https://res.cloudinary.com/djluqpaas/image/upload/v1727898790/melodie/hx6uqleun81p4yfzkhel.jpg",
       "alt": "Mélo Morin - Mélodie Morin Danseuse"
     },
     {
@@ -17,11 +17,11 @@
       "alt": "Mélo Morin - Mélodie Morin Danseuse"
     },
     {
-      "img": "/images/img16.jpg",
+      "img": "https://res.cloudinary.com/djluqpaas/image/upload/v1727898790/melodie/kraj3r9vfpzsvxz7uuwx.jpg",
       "alt": "Mélo Morin - Mélodie Morin Danseuse"
     },
     {
-      "img": "https://res.cloudinary.com/djluqpaas/image/upload/v1727898790/melodie/hx6uqleun81p4yfzkhel.jpg",
+      "img": "https://res.cloudinary.com/djluqpaas/image/upload/v1727898790/melodie/lvms3ibzwsjjpufkd9pc.jpg",
       "alt": "Mélo Morin - Mélodie Morin Danseuse"
     }
   ],

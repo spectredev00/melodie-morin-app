@@ -21,20 +21,20 @@ export default function Home() {
     en: {
       title: "Welcome to Mélo Morin's Site",
       description:
-        "Mélo Morin is a professional dancer and performer. Discover her journey and contact her for collaboration.",
+        "With a strong desire to break into the dance world, Mélodie devotes many hours every day to perfecting her skills. Her discipline and commitment are admirable, and her coaches are quick to praise her talent and rapid progress.",
       about1:
-        "With great determination to break into the dance industry, Mélodie devotes many hours each day to perfect her craft.",
+        "For Mélodie, dancing is not just a hobby, but a dream that she wants to turn into a career. She aspires to be part of a touring company, a show in the theater, on television or even half-time at the Sup",
       about2:
-        "Outside of dancing, Mélodie is also a diligent student, balancing her studies and passion. Her dream is to become a professional dancer, share her talent on big stages, and travel the world.",
+        "Outside of dance, Mélodie is also a keen student, balancing her studies with her passion. Those around her, including family and friends, support her unconditionally in her quest. With her talent, determination and love of dance, she has big goals.",
     },
     fr: {
       title: "Bienvenue sur le site de Mélo Élodie Morin Morin",
       description:
-        "Mélo Morin est une danseuse professionnelle et performeuse. Découvrez son parcours et contactez-la pour une collaboration.",
+        "Avec une grande volonté de percer dans le milieu de la danse, Mélodie consacre de nombreuses heures chaque jour, pour se perfectionner. Sa discipline et son engagement sont admirables et ses coachs n’hésitent pas à saluer son talent et sa progression rapide.",
       about1:
-        "Avec une grande volonté de percer dans le milieu de la danse, Mélodie consacre de nombreuses heures chaque jour pour se perfectionner.",
+        "APour Mélodie, la danse n’est pas seulement un hobby mais bien un rêve qu’elle souhaite transformer en carrière. Elle aspire à intégrer une troupe de tournée, un spectacle au théâtre, à la télévision ou encore la mi-temps au Superbowl.",
       about2:
-        "En dehors de la danse, Mélodie est également une élève assidue, équilibrant ses études et sa passion. Son rêve est de devenir danseuse professionnelle, partager son talent sur de grandes scènes et voyager à travers le monde.",
+        "En dehors de la danse, Mélodie est également une élève assidue, équilibrant ses études et sa passion. Son entourage, incluant sa famille et ses amis, la soutiennent inconditionnellement dans sa quête. Avec son talent, sa détermination et son amour pour la danse, elle a de grands objectifs.",
     },
   };
 
@@ -65,7 +65,9 @@ export default function Home() {
       <Prix />
       <Gallery photos={photos} />
       <section id="about" className="about">
-
+      <p className="about__paragraph animate__animated animate__fadeInUp animate__delay-1s">
+              {t.description}
+            </p>
 
             <p className="about__paragraph animate__animated animate__fadeInUp animate__delay-1s">
               {t.about1}
