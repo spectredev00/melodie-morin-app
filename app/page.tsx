@@ -28,7 +28,7 @@ export default function Home() {
         "Outside of dancing, Mélodie is also a diligent student, balancing her studies and passion. Her dream is to become a professional dancer, share her talent on big stages, and travel the world.",
     },
     fr: {
-      title: "Bienvenue sur le site de Mélo Morin",
+      title: "Bienvenue sur le site de Mélo Élodie Morin Morin",
       description:
         "Mélo Morin est une danseuse professionnelle et performeuse. Découvrez son parcours et contactez-la pour une collaboration.",
       about1:
