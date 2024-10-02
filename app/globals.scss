@@ -171,6 +171,11 @@ p{
   &__img {
     object-fit: contain;
     width: auto;
+    height: auto;
+
+    @include respond-to(lg) {
+      height: 600px;
+    }
   }
 
   &__content {
@@ -326,9 +331,7 @@ p{
   &__second {
 
 
-    @include respond-to(lg) {
-      transform: translateX(-100px);
-    }
+    
 
     p {
       font-size: 20px;
@@ -341,7 +344,7 @@ p{
     margin-bottom: 2rem;
     overflow: hidden;
     object-fit: contain;
-    width: 100%;
+
     height: auto;
 
     img {
