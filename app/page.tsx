@@ -11,10 +11,29 @@ import AboutSection from "@/components/aboutSection";
 import Prix from "@/components/prix";
 import Gallery from "@/components/gallery";
 
+
+import Image from "next/image";
+
 export default function Home() {
   const { language } = useLanguage(); // Utiliser le contexte pour récupérer la langue
   const [photos, setPhotos] = useState([]);
   const [videos, setVideos] = useState([]);
+
+  const localPhotos = [
+    {
+      "img": "https://res.cloudinary.com/djluqpaas/image/upload/v1727898792/melodie/n8k0uffcisfzmiqa4xzj.jpg",
+      "alt": "Mélo Morin - Mélodie Morin Danseuse"
+    },
+    {
+      "img": "https://res.cloudinary.com/djluqpaas/image/upload/v1727898792/melodie/ghqoszn7jk6738fjhopv.jpg",
+      "alt": "Mélo Morin - Mélodie Morin Danseuse"
+    },
+    {
+      "img": "https://res.cloudinary.com/djluqpaas/image/upload/v1727898792/melodie/xuekhs05geuacfteqkc8.jpg",
+      "alt": "Mélo Morin - Mélodie Morin Danseuse"
+    }
+    
+  ]
 
   // Contenu traduit directement dans le composant
   const translations = {
@@ -61,7 +80,23 @@ export default function Home() {
 
       <Hero />
       <VideoSection />
+      <Gallery photos={localPhotos} />
       <AboutSection />
+      <section id="video" className={`video-section`}>
+
+          <div className="video-section__preview">
+            <Image
+              src="https://res.cloudinary.com/djluqpaas/image/upload/v1727898791/melodie/cv4y4lvyb49z1yen6pap.jpg"
+              alt="Mélodie et Stéphane Morin en competition"
+              title="Mélodie et Stéphane Morin en compétition"
+              width={1200}
+              height={900}
+              objectFit="contain"
+              className="video-section__thumbnail fadeUp "
+            />
+          </div>
+      
+    </section>
       <Prix />
       <Gallery photos={photos} />
       <section id="about" className="about">

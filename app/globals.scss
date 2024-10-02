@@ -187,7 +187,7 @@ p{
   }
 
   &__logo {
-    font-size: 7em;
+    font-size: 6em;
     font-weight: bold;
     margin-bottom: 1em;
     line-height: 1;
@@ -195,7 +195,7 @@ p{
 
 
     @include respond-to(md) {
-      font-size: 10em;
+      font-size: 8em;
     }
   }
 }
@@ -219,23 +219,13 @@ p{
   }
 }
 
-/* Section Vidéo */
 .video-section {
   position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: auto; 
-  margin: 4em 0;
+  width: 100%;
+  padding: 2rem 0;
 
-  &--fullscreen {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
+  @include respond-to(lg) {
     height: 100vh;
-    z-index: 9999;
-    background-color: black;
   }
 
   &__preview {
@@ -243,14 +233,13 @@ p{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    height: auto;
   }
 
   &__thumbnail {
     width: 100%;
     height: 500px;
     object-fit: cover;
+    max-width: 1200px;
 
     @include respond-to(lg) {
       height: auto;
@@ -274,20 +263,41 @@ p{
   }
 
   &__wrapper {
-    position: absolute;
-    top: 0;
-    left: 0;
+    position: relative;
     width: 100%;
-    height: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
   }
 
   &__frame {
     width: 100%;
-    height: 100%;
-    max-width: 100vw;
-    max-height: 100vh;
+    height: 600px;
+    max-width: 1200px;
+    border-radius: 8px;
+  }
+
+  &__close-button {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background: #e8eaed;
+    color: #333;
+    border: none;
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    z-index: 10;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: #ccc;
+    }
   }
 }
+
 
 /* Empêcher le défilement pendant que la vidéo est en mode plein écran */
 .no-scroll {
@@ -302,21 +312,19 @@ p{
   &__container {
     display: flex;
     flex-direction: column;
+    
 
     @include respond-to(lg) {
       flex-direction: row;
+      justify-content: space-between;
+      width: 100%;
     }
   }
 
-  &__illustration {
-    width: 50%;
-    height: 400px;
-    background-color: #161616;
-    border-radius: 20px;
-  }
+ 
 
   &__second {
-    max-width: 600px;
+
 
     @include respond-to(lg) {
       transform: translateX(-100px);
@@ -389,7 +397,7 @@ p{
   }
 
   &__details {
-    font-size: 1.2rem;
+
     color: #e8eaed;
   }
 }

@@ -6,11 +6,16 @@ const VideoSection = () => {
 
   const handlePlayClick = () => {
     setIsPlaying(true);
-    document.body.classList.add("no-scroll"); 
+    document.body.classList.add("no-scroll"); // Empêcher le scroll pendant la lecture
+  };
+
+  const handleCloseClick = () => {
+    setIsPlaying(false);
+    document.body.classList.remove("no-scroll"); // Restaurer le scroll après fermeture
   };
 
   return (
-    <section id="video" className={`video-section ${isPlaying ? 'video-section--fullscreen' : ''}`}>
+    <section id="video" className={`video-section ${isPlaying ? "video-section--playing" : ""}`}>
       {!isPlaying && (
         <>
           {/* Image d'aperçu */}
@@ -21,7 +26,7 @@ const VideoSection = () => {
               width={1200}
               height={900}
               objectFit="contain"
-              className="video-section__thumbnail fadeUp "
+              className="video-section__thumbnail fadeUp"
             />
             <button
               className="video-section__play-button fadeIn delay-5"
@@ -42,6 +47,10 @@ const VideoSection = () => {
       )}
       {isPlaying && (
         <div className="video-section__wrapper">
+          {/* Bouton pour fermer la vidéo */}
+          <button className="video-section__close-button" onClick={handleCloseClick}>
+            ✕ 
+          </button>
           <iframe
             className="video-section__frame"
             src="https://www.youtube.com/embed/9713Rw7dK1I?autoplay=1&mute=0"

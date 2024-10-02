@@ -110,11 +110,7 @@ const Prix = () => {
               </li>
             ))}
      
-            <p className="prix__item fadeLeft delay-5">
-
-                {t.description}
-
-            </p>
+          
           </ul>
         </div>
       </div>
