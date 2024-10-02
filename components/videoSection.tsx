@@ -6,23 +6,27 @@ const VideoSection = () => {
 
   const handlePlayClick = () => {
     setIsPlaying(true);
+    document.body.classList.add("no-scroll"); 
   };
 
   return (
-    <section className="video-section">
+    <section id="video" className={`video-section ${isPlaying ? 'video-section--fullscreen' : ''}`}>
       {!isPlaying && (
         <>
           {/* Image d'aperçu */}
-          <div className="video-preview">
+          <div className="video-section__preview">
             <Image
-              src="/images/img9.jpg"
+              src="/images/img10.jpg"
               alt="Video Preview"
               width={1200}
               height={900}
               objectFit="contain"
-              className="video-thumbnail animate__animated animate__fadeInUp"
+              className="video-section__thumbnail animate__animated animate__fadeInUp"
             />
-            <button className="play-button" onClick={handlePlayClick}>
+            <button
+              className="video-section__play-button"
+              onClick={handlePlayClick}
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 height="80px"
@@ -37,9 +41,9 @@ const VideoSection = () => {
         </>
       )}
       {isPlaying && (
-        <div className="video-wrapper">
+        <div className="video-section__wrapper">
           <iframe
-            className="video-frame"
+            className="video-section__frame"
             src="https://www.youtube.com/embed/9713Rw7dK1I?autoplay=1&mute=0"
             title="YouTube video player"
             frameBorder="0"

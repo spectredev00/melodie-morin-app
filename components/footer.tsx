@@ -1,10 +1,17 @@
+import { useLanguage } from "@/app/context"; // Importer le contexte de langue
+
 export default function Footer() {
+  const { language } = useLanguage(); // Utiliser le contexte de langue
+
   return (
-    <footer id="contact" className="contact">
-      <div className="contact-wrapper">
-        <a href="/">Mélo Morin</a>
-        <a href="/contact">
-          <span>Contact</span> 
+    <footer id="contact" className="footer">
+      <div className="footer__wrapper">
+        <a href="/" className="footer__link">
+          Mélo Morin
+        </a>
+        <a href="/contact" className="footer__link">
+          {/* Texte dynamique en fonction de la langue */}
+          <span>{language === "fr" ? "Contact" : "Contact us"}</span>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             height="24px"
