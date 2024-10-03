@@ -38,12 +38,12 @@ const AboutSection = () => {
     <section className="about">
       <div className="about__container">
         <div className="about__text">
-          <h2 className="about__title">{t.title}</h2>
-          <div className="divider"></div>
-          <p className="about__paragraph">{t.paragraph1}</p>
-          <p className="about__paragraph">{t.paragraph2}</p>
-          <p className="about__paragraph">{t.paragraph3}</p>
-          <p className="about__paragraph">{t.paragraph4}</p>
+          <h2 className="about__title" data-aos="fade-up"  data-aos-delay="80">{t.title}</h2>
+          <div className="divider" data-aos="fade-up"  data-aos-delay="100"></div>
+          <p className="about__paragraph" data-aos="fade-up"  data-aos-delay="120">{t.paragraph1}</p>
+          <p className="about__paragraph" data-aos="fade-up"  data-aos-delay="150">{t.paragraph2}</p>
+          <p className="about__paragraph" data-aos="fade-up"  data-aos-delay="200">{t.paragraph3}</p>
+          <p className="about__paragraph" data-aos="fade-up"  data-aos-delay="250">{t.paragraph4}</p>
         </div>
       </div>
     </section>

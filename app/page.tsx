@@ -4,12 +4,13 @@ import { useEffect, useState } from "react";
 import "animate.css";
 import Head from "next/head";
 import { useLanguage } from "./context";
-import Layout from "./layout";
 import Hero from "@/components/hero";
 import VideoSection from "@/components/videoSection";
 import AboutSection from "@/components/aboutSection";
+import ImageSlider from "@/components/swiper";
 import Prix from "@/components/prix";
 import Gallery from "@/components/gallery";
+import Presences from "@/components/presences";
 
 
 import Image from "next/image";
@@ -25,7 +26,15 @@ export default function Home() {
       "alt": "Mélo Morin - Mélodie Morin Danseuse"
     },
     {
+      "img": "https://res.cloudinary.com/djluqpaas/image/upload/v1727898791/melodie/cv4y4lvyb49z1yen6pap.jpg",
+      "alt": "Mélo Morin - Mélodie Morin Danseuse"
+    },
+    {
       "img": "https://res.cloudinary.com/djluqpaas/image/upload/v1727898792/melodie/ghqoszn7jk6738fjhopv.jpg",
+      "alt": "Mélo Morin - Mélodie Morin Danseuse"
+    },
+    {
+      "img": "https://res.cloudinary.com/djluqpaas/image/upload/v1727898790/melodie/c9p0xikwtnmrkhzbd0du.jpg",
       "alt": "Mélo Morin - Mélodie Morin Danseuse"
     },
     {
@@ -35,7 +44,7 @@ export default function Home() {
     
   ]
 
-  // Contenu traduit directement dans le composant
+
   const translations = {
     en: {
       title: "Welcome to Mélo Morin's Site",
@@ -80,44 +89,51 @@ export default function Home() {
 
       <Hero />
       <VideoSection />
-      <Gallery photos={localPhotos} />
+    
       <AboutSection />
+    
+    <ImageSlider photos={localPhotos} />
+      <Prix />
       <section id="video" className={`video-section`}>
 
-          <div className="video-section__preview">
-            <Image
-              src="https://res.cloudinary.com/djluqpaas/image/upload/v1727898791/melodie/cv4y4lvyb49z1yen6pap.jpg"
-              alt="Mélodie et Stéphane Morin en competition"
-              title="Mélodie et Stéphane Morin en compétition"
-              width={1200}
-              height={900}
-              objectFit="contain"
-              className="video-section__thumbnail fadeUp "
-            />
-          </div>
+<div className="video-section__preview">
+  <Image
+    src="https://res.cloudinary.com/djluqpaas/image/upload/v1727898791/melodie/cv4y4lvyb49z1yen6pap.jpg"
+    alt="Mélodie et Stéphane Morin en competition"
+    title="Mélodie et Stéphane Morin en compétition"
+    width={1200}
+    height={900}
+    objectFit="contain"
+    className="video-section__thumbnail fadeUp "
+  />
+</div>
+
+</section> 
+      <Presences />
       
-    </section>
-      <Prix />
       <Gallery photos={photos} />
       <section id="about" className="about">
-      <p className="about__paragraph animate__animated animate__fadeInUp animate__delay-1s">
+        <div className="about__text">
+        <p className="about__paragraph" data-aos="fade-up"  data-aos-delay="100">
               {t.description}
             </p>
 
-            <p className="about__paragraph animate__animated animate__fadeInUp animate__delay-1s">
+            <p className="about__paragraph" data-aos="fade-up"  data-aos-delay="150">
               {t.about1}
             </p>
-            <p className="about__paragraph animate__animated animate__fadeInUp animate__delay-1s">
+            <p className="about__paragraph" data-aos="fade-up"  data-aos-delay="200">
               {t.about2}
             </p>
+        </div>
+    
    
       </section>
 
-      <section
+      {/* <section
   className="melodie-studio fadeUp"
   style={{ backgroundImage: "url('/images/studio.jpg')" }}
 >
-</section>
+</section> */}
 
 
     </>

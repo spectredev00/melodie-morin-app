@@ -7,6 +7,9 @@ $white: #313131;
 $black: #000;
 $radius: 0.5rem;
 $transition: all 0.4s linear;
+$max-width: 1200px;
+$with-fluid: 96%;
+
 
 $breakpoints: (
   xs: 440px,
@@ -28,6 +31,13 @@ $breakpoints: (
     @warn "Le breakpoint `#{$breakpoint-name}` n'existe pas dans la liste des breakpoints.";
   }
 }
+
+* {
+  box-sizing: border-box;
+  
+}
+
+
 
 .scroll-button {
   animation: bounce 2s infinite !important;
@@ -75,7 +85,7 @@ body {
   color: #cdcdcd;
   scroll-behavior: smooth;
   font-family: 'Poppins', sans-serif;
-  font-weight: 300; /* Corps de texte léger */
+  font-weight: 200;
 }
 
 a {
@@ -116,14 +126,14 @@ p{
 .container {
   &__wrapper {
     width: 96%;
-    max-width: 1200px;
+    max-width: $max-width;
     margin: 0 auto;
   }
 }
 
 /* Header */
 .header {
-  max-width: 1200px;
+  max-width: $max-width;
   width: 96%;
   margin: 0 auto;
   border-bottom: 1px solid rgb(65, 65, 65);
@@ -160,13 +170,13 @@ p{
 /* Section Hero */
 .hero {
   height: auto;
-  min-height: 80vh;
-  width: 96%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
+  min-height: 70vh;
+  width: $with-fluid;
+  max-width: $max-width;
   margin: 4em 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 
   &__img {
     object-fit: contain;
@@ -175,14 +185,16 @@ p{
 
     @include respond-to(lg) {
       height: 600px;
+      width: 600px;
     }
   }
 
   &__content {
+    width: 100%;
     display: flex;
     flex-direction: column;
-    max-width: 1200px;
-    width: 100%;
+    gap: 30px;
+    overflow: hidden;
 
     @include respond-to(lg) {
       flex-direction: row;
@@ -197,6 +209,7 @@ p{
     margin-bottom: 1em;
     line-height: 1;
     display: inline;
+    z-index: 10;
 
 
     @include respond-to(md) {
@@ -207,11 +220,14 @@ p{
 
 .social {
   display: flex;
+  align-items: center;
   flex-wrap: wrap;
   gap: 1rem;
 
   a {
-    color: #adadad;
+    display: flex;
+    align-items: center;
+    color: #fff;
     text-decoration: none;
     padding: 0.5em 0.8em;
     font-weight: 200;
@@ -227,11 +243,8 @@ p{
 .video-section {
   position: relative;
   width: 100%;
-  padding: 2rem 0;
 
-  @include respond-to(lg) {
-    height: 100vh;
-  }
+  
 
   &__preview {
     position: relative;
@@ -244,7 +257,7 @@ p{
     width: 100%;
     height: 500px;
     object-fit: cover;
-    max-width: 1200px;
+    max-width: $max-width;
 
     @include respond-to(lg) {
       height: auto;
@@ -270,14 +283,14 @@ p{
   &__wrapper {
     position: relative;
     width: 100%;
-    max-width: 1200px;
+    max-width: $max-width;
     margin: 0 auto;
   }
 
   &__frame {
     width: 100%;
     height: 600px;
-    max-width: 1200px;
+    max-width: $max-width;
     border-radius: 8px;
   }
 
@@ -312,48 +325,36 @@ p{
 
 /* Section About */
 .about {
-  padding: 4em 2em;
-
+  padding: 2em 1em;
   &__container {
     display: flex;
     flex-direction: column;
-    
-
+    gap: 30px;
     @include respond-to(lg) {
       flex-direction: row;
       justify-content: space-between;
+      align-items: center;
       width: 100%;
     }
   }
 
- 
-
-  &__second {
-
-
-    
-
-    p {
-      font-size: 20px;
-    }
-
+  @include respond-to(lg) {
+    padding: 8em 0;
   }
 
+
+
+
+
   &__img {
-    position: relative;
-    margin-bottom: 2rem;
     overflow: hidden;
     object-fit: contain;
-
     height: auto;
 
     img {
       width: 100%;
+      max-width: 500px;
       object-fit: contain;
-    }
-
-    @include respond-to(lg) {
-      margin-right: 4rem;
     }
 
     &-profile {
@@ -368,6 +369,7 @@ p{
 
   &__text {
     max-width: 800px;
+    margin: 0 auto;
   }
 
   &__title {
@@ -383,6 +385,7 @@ p{
 
 /* Section Prix */
 .prix {
+
   &__list {
     list-style: none;
     padding: 0;
@@ -436,7 +439,7 @@ p{
 
   &__wrapper {
     width: 96%;
-    max-width: 1200px;
+    max-width: $max-width;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -477,7 +480,7 @@ p{
     justify-content: center;
     align-items: center;
     height: 100vh;
-    max-width: 1200px;
+    max-width: $max-width;
 
   }
 
@@ -611,6 +614,47 @@ p{
     height: 100%;
     background: rgba(0, 0, 0, 0.5);
     z-index: 1;
+  }
+}
+
+
+
+.image-slider {
+  width: 100%;
+  height: auto;
+
+  &__image-container {
+    position: relative;
+    height: 400px;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  &__image {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-pagination-bullet {
+    background-color: #fff;
+    opacity: 0.7;
+  }
+
+  .swiper-pagination-bullet-active {
+    background-color: #000;
+    opacity: 1;
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    color: #fff;
+    opacity: 0.8;
+  }
+
+  .swiper-button-prev:hover,
+  .swiper-button-next:hover {
+    opacity: 1;
   }
 }
 
