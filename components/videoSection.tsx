@@ -15,7 +15,10 @@ const VideoSection = () => {
   };
 
   return (
-    <section id="video" className={`video-section ${isPlaying ? "video-section--playing" : ""}`}>
+    <section
+      id="video"
+      className={`video-section ${isPlaying ? "video-section--playing" : ""}`}
+    >
       {!isPlaying && (
         <>
           {/* Image d'aperçu */}
@@ -48,8 +51,11 @@ const VideoSection = () => {
       {isPlaying && (
         <div className="video-section__wrapper">
           {/* Bouton pour fermer la vidéo */}
-          <button className="video-section__close-button" onClick={handleCloseClick}>
-            ✕ 
+          <button
+            className="video-section__close-button"
+            onClick={handleCloseClick}
+          >
+            ✕
           </button>
           <iframe
             className="video-section__frame"

@@ -1,4 +1,4 @@
-"use client"; // Assurez-vous que ce composant est côté client
+"use client"; 
 
 import { useEffect, useState } from "react";
 import "animate.css";
@@ -12,38 +12,35 @@ import Prix from "@/components/prix";
 import Gallery from "@/components/gallery";
 import Presences from "@/components/presences";
 
-
 import Image from "next/image";
 
 export default function Home() {
-  const { language } = useLanguage(); // Utiliser le contexte pour récupérer la langue
+  const { language } = useLanguage(); 
   const [photos, setPhotos] = useState([]);
   const [videos, setVideos] = useState([]);
 
   const localPhotos = [
     {
-      "img": "https://res.cloudinary.com/djluqpaas/image/upload/v1727898792/melodie/n8k0uffcisfzmiqa4xzj.jpg",
-      "alt": "Mélo Morin - Mélodie Morin Danseuse"
+      img: "https://res.cloudinary.com/djluqpaas/image/upload/v1727898792/melodie/n8k0uffcisfzmiqa4xzj.jpg",
+      alt: "Mélo Morin - Mélodie Morin Danseuse",
     },
     {
-      "img": "https://res.cloudinary.com/djluqpaas/image/upload/v1727898791/melodie/cv4y4lvyb49z1yen6pap.jpg",
-      "alt": "Mélo Morin - Mélodie Morin Danseuse"
+      img: "https://res.cloudinary.com/djluqpaas/image/upload/v1727898791/melodie/cv4y4lvyb49z1yen6pap.jpg",
+      alt: "Mélo Morin - Mélodie Morin Danseuse",
     },
     {
-      "img": "https://res.cloudinary.com/djluqpaas/image/upload/v1727898792/melodie/ghqoszn7jk6738fjhopv.jpg",
-      "alt": "Mélo Morin - Mélodie Morin Danseuse"
+      img: "https://res.cloudinary.com/djluqpaas/image/upload/v1727898792/melodie/ghqoszn7jk6738fjhopv.jpg",
+      alt: "Mélo Morin - Mélodie Morin Danseuse",
     },
     {
-      "img": "https://res.cloudinary.com/djluqpaas/image/upload/v1727898790/melodie/c9p0xikwtnmrkhzbd0du.jpg",
-      "alt": "Mélo Morin - Mélodie Morin Danseuse"
+      img: "https://res.cloudinary.com/djluqpaas/image/upload/v1727898790/melodie/c9p0xikwtnmrkhzbd0du.jpg",
+      alt: "Mélo Morin - Mélodie Morin Danseuse",
     },
     {
-      "img": "https://res.cloudinary.com/djluqpaas/image/upload/v1727898792/melodie/xuekhs05geuacfteqkc8.jpg",
-      "alt": "Mélo Morin - Mélodie Morin Danseuse"
-    }
-    
-  ]
-
+      img: "https://res.cloudinary.com/djluqpaas/image/upload/v1727898792/melodie/xuekhs05geuacfteqkc8.jpg",
+      alt: "Mélo Morin - Mélodie Morin Danseuse",
+    },
+  ];
 
   const translations = {
     en: {
@@ -66,8 +63,8 @@ export default function Home() {
     },
   };
 
-  // Choisir la traduction basée sur la langue active
-  const t = translations[language as keyof typeof translations] || translations.en;
+  const t =
+    translations[language as keyof typeof translations] || translations.en;
 
   useEffect(() => {
     fetch("/medias.json")
@@ -86,56 +83,52 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="canonical" href="https://ton-site.com" />
       </Head>
-
       <Hero />
       <VideoSection />
-    
       <AboutSection />
-    
-    <ImageSlider photos={localPhotos} />
+      <ImageSlider photos={localPhotos} />
       <Prix />
       <section id="video" className={`video-section`}>
-
-<div className="video-section__preview">
-  <Image
-    src="https://res.cloudinary.com/djluqpaas/image/upload/v1727898791/melodie/cv4y4lvyb49z1yen6pap.jpg"
-    alt="Mélodie et Stéphane Morin en competition"
-    title="Mélodie et Stéphane Morin en compétition"
-    width={1200}
-    height={900}
-    objectFit="contain"
-    className="video-section__thumbnail fadeUp "
-  />
-</div>
-
-</section> 
+        <div className="video-section__preview">
+          <Image
+            src="/images/prix.jpg"
+            alt="Mélodie et Stéphane Morin en competition"
+            title="Mélodie et Stéphane Morin en compétition"
+            width={1000}
+            height={700}
+            objectFit="contain"
+            className="video-section__thumbnail"
+          />
+        </div>
+      </section>
       <Presences />
-      
       <Gallery photos={photos} />
       <section id="about" className="about">
         <div className="about__text">
-        <p className="about__paragraph" data-aos="fade-up"  data-aos-delay="100">
-              {t.description}
-            </p>
+          <p
+            className="about__paragraph"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            {t.description}
+          </p>
 
-            <p className="about__paragraph" data-aos="fade-up"  data-aos-delay="150">
-              {t.about1}
-            </p>
-            <p className="about__paragraph" data-aos="fade-up"  data-aos-delay="200">
-              {t.about2}
-            </p>
+          <p
+            className="about__paragraph"
+            data-aos="fade-up"
+            data-aos-delay="150"
+          >
+            {t.about1}
+          </p>
+          <p
+            className="about__paragraph"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            {t.about2}
+          </p>
         </div>
-    
-   
       </section>
-
-      {/* <section
-  className="melodie-studio fadeUp"
-  style={{ backgroundImage: "url('/images/studio.jpg')" }}
->
-</section> */}
-
-
     </>
   );
 }

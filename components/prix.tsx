@@ -76,16 +76,6 @@ const Prix = () => {
     <section className="about ">
       <div className="about__container">
         {/* Image avec bordure */}
-        <div className="about__img">
-          <Image
-            src="/images/img11.jpg"
-            alt="Trophée"
-            width={500}
-            height={500}
-            className="about__profile-img"
-          />
-        </div>
-        {/* Texte avec liste des prix */}
         <div className="about__text">
           <h2 className="about__title" data-aos="fade-up"  data-aos-delay="80">{t.title}</h2>
           <div className="divider" data-aos="fade-up"  data-aos-delay="100"></div>

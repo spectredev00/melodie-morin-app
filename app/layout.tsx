@@ -37,7 +37,10 @@ export default function Layout({ children }: LayoutProps) {
           <meta name="robots" content="index, follow" />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-          <meta property="og:title" content="Mélo Morin - Danseuse et Photographe" />
+          <meta
+            property="og:title"
+            content="Mélo Morin - Danseuse et Photographe"
+          />
           <meta
             property="og:description"
             content="Découvrez les créations et performances de Mélo Morin, une artiste talentueuse dans le domaine de la danse et de la photographie."
@@ -48,7 +51,10 @@ export default function Layout({ children }: LayoutProps) {
           <meta property="og:locale" content="en_US" />
 
           <meta name="twitter:card" content="summary_large_image" />
-          <meta name="twitter:title" content="Mélo Morin - Danseuse et Photographe" />
+          <meta
+            name="twitter:title"
+            content="Mélo Morin - Danseuse et Photographe"
+          />
           <meta
             name="twitter:description"
             content="Découvrez les créations et performances de Mélo Morin, une artiste talentueuse dans le domaine de la danse et de la photographie."
@@ -56,9 +62,23 @@ export default function Layout({ children }: LayoutProps) {
           <meta name="twitter:image" content="/images/portrait-melodi.jpg" />
 
           <link rel="icon" href="/favicon.ico" />
-          <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-          <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-          <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+          <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="/apple-touch-icon.png"
+          />
+          <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/favicon-32x32.png"
+          />
+          <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/favicon-16x16.png"
+          />
           <link rel="manifest" href="/site.webmanifest" />
         </Head>
         <body>

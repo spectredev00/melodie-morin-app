@@ -1,6 +1,5 @@
-
 @import "animate.css/animate.min.css";
-@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Text:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Text:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 /* Variables */
 $white: #313131;
@@ -9,7 +8,6 @@ $radius: 0.5rem;
 $transition: all 0.4s linear;
 $max-width: 1200px;
 $with-fluid: 96%;
-
 
 $breakpoints: (
   xs: 440px,
@@ -34,10 +32,7 @@ $breakpoints: (
 
 * {
   box-sizing: border-box;
-  
 }
-
-
 
 .scroll-button {
   animation: bounce 2s infinite !important;
@@ -84,7 +79,7 @@ body {
   background-color: #0b0b0b;
   color: #cdcdcd;
   scroll-behavior: smooth;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 200;
 }
 
@@ -103,18 +98,15 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Big Shoulders Text', sans-serif; 
-  font-weight: 600; 
+  font-family: "Big Shoulders Text", sans-serif;
+  font-weight: 600;
 }
 
-p{
+p {
   display: flex;
   align-items: flex-end;
   gap: 5px;
 }
-
-
-
 
 .divider {
   height: 2px;
@@ -211,7 +203,6 @@ p{
     display: inline;
     z-index: 10;
 
-
     @include respond-to(md) {
       font-size: 8em;
     }
@@ -232,7 +223,7 @@ p{
     padding: 0.5em 0.8em;
     font-weight: 200;
     border: 0.1px solid #8f8f8f;
-    transition:$transition;
+    transition: $transition;
 
     &:hover {
       border-color: #f3f3f3;
@@ -243,8 +234,6 @@ p{
 .video-section {
   position: relative;
   width: 100%;
-
-  
 
   &__preview {
     position: relative;
@@ -316,12 +305,10 @@ p{
   }
 }
 
-
 /* Empêcher le défilement pendant que la vidéo est en mode plein écran */
 .no-scroll {
   overflow: hidden;
 }
-
 
 /* Section About */
 .about {
@@ -342,10 +329,6 @@ p{
     padding: 8em 0;
   }
 
-
-
-
-
   &__img {
     overflow: hidden;
     object-fit: contain;
@@ -362,9 +345,6 @@ p{
       z-index: 10;
       position: relative;
     }
-
-  
-    
   }
 
   &__text {
@@ -385,7 +365,6 @@ p{
 
 /* Section Prix */
 .prix {
-
   &__list {
     list-style: none;
     padding: 0;
@@ -403,7 +382,6 @@ p{
   }
 
   &__details {
-
     color: #e8eaed;
   }
 }
@@ -413,25 +391,24 @@ p{
   display: flex;
   width: auto;
   margin-left: -10px;
-  margin-right: -10px; 
+  margin-right: -10px;
 
   &__column {
-    padding-left: 10px; 
+    padding-left: 10px;
     padding-right: 10px;
     background-clip: padding-box;
   }
 
   &__item {
-    margin-bottom: 20px; 
+    margin-bottom: 20px;
   }
 
   &__img {
     width: 100%;
     height: auto;
-    object-fit: cover
+    object-fit: cover;
   }
 }
-
 
 /* Section Footer */
 .footer {
@@ -481,7 +458,6 @@ p{
     align-items: center;
     height: 100vh;
     max-width: $max-width;
-
   }
 
   &__content {
@@ -505,8 +481,6 @@ p{
     object-position: top;
   }
 }
-
-
 
 /* Fade In */
 @keyframes fadeIn {
@@ -591,7 +565,6 @@ p{
   animation-delay: 500ms;
 }
 
-
 .melodie-studio {
   background-size: cover;
   background-position: center;
@@ -617,15 +590,13 @@ p{
   }
 }
 
-
-
 .image-slider {
   width: 100%;
   height: auto;
 
   &__image-container {
     position: relative;
-    height: 400px;
+    height: 500px;
     width: 100%;
     overflow: hidden;
   }
@@ -657,4 +628,3 @@ p{
     opacity: 1;
   }
 }
-

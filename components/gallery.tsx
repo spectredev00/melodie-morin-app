@@ -1,5 +1,3 @@
-
-
 import Masonry from "react-masonry-css";
 import Image from "next/image";
 

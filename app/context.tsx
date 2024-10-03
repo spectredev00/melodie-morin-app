@@ -9,7 +9,9 @@ interface LanguageContextType {
 }
 
 // Créer le contexte avec une langue par défaut (anglais)
-const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
+const LanguageContext = createContext<LanguageContextType | undefined>(
+  undefined,
+);
 
 // Provider pour envelopper l'application et fournir l'état de la langue
 export const LanguageProvider = ({ children }: { children: ReactNode }) => {

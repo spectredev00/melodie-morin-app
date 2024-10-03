@@ -73,28 +73,37 @@ const Presences = () => {
     },
   };
 
-  const t = translations[language as keyof typeof translations] || translations.fr;
+  const t =
+    translations[language as keyof typeof translations] || translations.fr;
 
   return (
     <section className="about">
       <div className="about__container">
-      <div className="about__img">
-          <Image
-            src="/images/img11.jpg"
-            alt="Trophée"
-            width={500}
-            height={500}
-            className="about__profile-img"
-          />
-        </div>
         <div className="about__text">
-          <h2 className="about__title" data-aos="fade-up"  data-aos-delay="80">{t.title}</h2>
-          <div className="divider" data-aos="fade-up"  data-aos-delay="100"></div>
-          <p className="about__paragraph" data-aos="fade-up"  data-aos-delay="120">{t.description}</p>
+          <h2 className="about__title" data-aos="fade-up" data-aos-delay="80">
+            {t.title}
+          </h2>
+          <div
+            className="divider"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          ></div>
+          <p
+            className="about__paragraph"
+            data-aos="fade-up"
+            data-aos-delay="120"
+          >
+            {t.description}
+          </p>
           <ul className="prix__list">
             {t.presencesList.map((presence, index) => (
-              <li key={index} className="prix__item" data-aos="fade-up"  data-aos-delay="150">
-                 <span className="prix__icon">
+              <li
+                key={index}
+                className="prix__item"
+                data-aos="fade-up"
+                data-aos-delay="150"
+              >
+                <span className="prix__icon">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     height="24px"
@@ -106,13 +115,13 @@ const Presences = () => {
                   </svg>
                 </span>
                 <span className="prix__details">
-                  <strong>{presence.title}</strong> {presence.description && `– ${presence.description}`}
+                  <strong>{presence.title}</strong>{" "}
+                  {presence.description && `– ${presence.description}`}
                 </span>
               </li>
             ))}
           </ul>
         </div>
-       
       </div>
     </section>
   );

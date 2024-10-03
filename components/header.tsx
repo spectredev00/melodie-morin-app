@@ -14,7 +14,11 @@ const Header = () => {
         <ul className="header__list">
           <li className="lang">
             {/* Bouton pour changer la langue */}
-            <button onClick={toggleLanguage} className="header__link" title="Langue">
+            <button
+              onClick={toggleLanguage}
+              className="header__link"
+              title="Langue"
+            >
               {language === "en" ? "FRANÇAIS" : "ENGLISH"}
             </button>
           </li>

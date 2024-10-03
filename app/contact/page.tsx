@@ -1,4 +1,4 @@
-"use client"; 
+"use client";
 
 import Head from "next/head";
 import SocialLinks from "@/components/socialLinks";
@@ -6,25 +6,27 @@ import Image from "next/image";
 
 import Layout from "@/app/layout";
 
-
 import { useLanguage } from "../context";
 const Contact = () => {
-  const { language } = useLanguage(); 
+  const { language } = useLanguage();
 
-  
   const content = {
     en: {
       title: "Contact Mélo Morin",
-      description: "To contact me, send me an email at melomorin3022@hotmail.com",
+      description:
+        "To contact me, send me an email at melomorin3022@hotmail.com",
       seoTitle: "Contact Mélo Morin",
-      seoDescription: "To contact me, send me an email at melomorin3022@hotmail.com",
+      seoDescription:
+        "To contact me, send me an email at melomorin3022@hotmail.com",
       emailLabel: "Send me an email:",
     },
     fr: {
       title: "Contactez Mélo Morin",
-      description: "Pour me contacter, envoyez-moi un courriel à melomorin3022@hotmail.com",
+      description:
+        "Pour me contacter, envoyez-moi un courriel à melomorin3022@hotmail.com",
       seoTitle: "Contactez Mélo Morin",
-      seoDescription: "Pour me contacter, envoyez-moi un email à melomorin3022@hotmail.com",
+      seoDescription:
+        "Pour me contacter, envoyez-moi un email à melomorin3022@hotmail.com",
       emailLabel: "Pour me contacter, envoyez-moi un email :",
     },
   };
