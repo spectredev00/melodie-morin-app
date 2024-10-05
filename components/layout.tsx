@@ -54,6 +54,7 @@ export default function Layout({ children }: LayoutProps) {
         <meta name="twitter:image" content="/images/portrait-melodi.jpg" />
 
         <link rel="icon" href="/favicon.ico" />
+        <meta name="google-site-verification" content="REDIrtE1hBOERhkhzkgDia4M63SsripzPOAoaSv1XXQ" />
        
       </Head>
 
