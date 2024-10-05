@@ -1,4 +1,4 @@
-import { useLanguage } from "@/app/context";
+import { useLanguage } from "@/context";
 
 const Header = () => {
   const { language, setLanguage } = useLanguage(); // Accéder à la langue actuelle et la fonction pour changer la langue

@@ -1,8 +1,8 @@
 import { FaFacebookF, FaInstagram, FaYoutube } from "react-icons/fa";
-import { useLanguage } from "@/app/context"; // Importer le contexte de langue
+import { useLanguage } from "@/context";
 
 const SocialLinks = () => {
-  const { language } = useLanguage(); // Utiliser le contexte de langue
+  const { language } = useLanguage(); 
 
   return (
     <div className="social-links">

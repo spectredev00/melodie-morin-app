@@ -1,5 +1,4 @@
-import { useLanguage } from "@/app/context"; // Importer le contexte de langue
-
+import { useLanguage } from "@/context";
 export default function Footer() {
   const { language } = useLanguage(); // Utiliser le contexte de langue
 

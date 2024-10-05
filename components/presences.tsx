@@ -1,13 +1,13 @@
-"use client";
+
 
 import React from "react";
-import { useLanguage } from "@/app/context";
+import { useLanguage } from "@/context";
 import Image from "next/image";
 
 const Presences = () => {
-  const { language } = useLanguage(); // Utiliser le contexte de langue
+  const { language } = useLanguage(); 
 
-  // Traductions des présences sur scène
+
   const translations = {
     en: {
       title: "Stage Presence",

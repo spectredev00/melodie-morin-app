@@ -1,9 +1,9 @@
-"use client"; 
+
 
 import { useEffect, useState } from "react";
 import "animate.css";
 import Head from "next/head";
-import { useLanguage } from "./context";
+import { useLanguage } from "@/context";
 import Hero from "@/components/hero";
 import VideoSection from "@/components/videoSection";
 import AboutSection from "@/components/aboutSection";
@@ -13,6 +13,7 @@ import Gallery from "@/components/gallery";
 import Presences from "@/components/presences";
 
 import Image from "next/image";
+import Layout from "@/components/layout";
 
 export default function Home() {
   const { language } = useLanguage(); 
@@ -76,13 +77,7 @@ export default function Home() {
   }, []);
 
   return (
-    <>
-      <Head>
-        <title>{t.title}</title>
-        <meta name="description" content={t.description} />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="canonical" href="https://ton-site.com" />
-      </Head>
+    <Layout>
       <Hero />
       <VideoSection />
       <AboutSection />
@@ -129,6 +124,6 @@ export default function Home() {
           </p>
         </div>
       </section>
-    </>
+    </Layout>
   );
 }

@@ -1,5 +1,5 @@
 import React from "react";
-import { useLanguage } from "@/app/context";
+import { useLanguage } from "@/context";
 
 const AboutSection = () => {
   const { language } = useLanguage();

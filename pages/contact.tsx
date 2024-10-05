@@ -1,12 +1,12 @@
-"use client";
 
-import Head from "next/head";
+
+
 import SocialLinks from "@/components/socialLinks";
 import Image from "next/image";
 
-import Layout from "@/app/layout";
+import Layout from "@/components/layout";
 
-import { useLanguage } from "../context";
+import { useLanguage } from "@/context";
 const Contact = () => {
   const { language } = useLanguage();
 
@@ -31,32 +31,10 @@ const Contact = () => {
     },
   };
 
-  // Déterminer le contenu à afficher selon la langue (par défaut en anglais)
   const t = content[language as keyof typeof content] || content.en;
 
   return (
-    <>
-      <Head>
-        {/* SEO Meta Tags */}
-        <title>{t.seoTitle}</title>
-        <meta name="description" content={t.seoDescription} />
-        <meta name="robots" content="index, follow" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-        {/* Open Graph Meta Tags */}
-        <meta property="og:title" content={t.seoTitle} />
-        <meta property="og:description" content={t.seoDescription} />
-        <meta property="og:image" content="/images/portrait-melodi.jpg" />
-        <meta property="og:url" content="https://melomorin.com/contact" />
-        <meta property="og:type" content="website" />
-
-        {/* Twitter Card Meta Tags */}
-        <meta name="twitter:title" content={t.seoTitle} />
-        <meta name="twitter:description" content={t.seoDescription} />
-        <meta name="twitter:image" content="/images/contact-image.jpg" />
-        <meta name="twitter:card" content="summary_large_image" />
-      </Head>
-
+    <Layout>
       <section className="contact">
         <div className="contact__content">
           <Image
@@ -71,11 +49,10 @@ const Contact = () => {
           <a href="mailto:melomorin3022@hotmail.com" className="contact__email">
             melomorin3022@hotmail.com
           </a>
-
           <SocialLinks />
         </div>
       </section>
-    </>
+    </Layout>
   );
 };
 

@@ -1,8 +1,8 @@
-"use client";
+
 
 import React from "react";
 import Image from "next/image";
-import { useLanguage } from "@/app/context";
+import { useLanguage } from "@/context";
 const Prix = () => {
   const { language } = useLanguage(); // Utiliser le contexte de langue
 

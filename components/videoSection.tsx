@@ -6,12 +6,12 @@ const VideoSection = () => {
 
   const handlePlayClick = () => {
     setIsPlaying(true);
-    document.body.classList.add("no-scroll"); // Empêcher le scroll pendant la lecture
+    document.body.classList.add("no-scroll"); 
   };
 
   const handleCloseClick = () => {
     setIsPlaying(false);
-    document.body.classList.remove("no-scroll"); // Restaurer le scroll après fermeture
+    document.body.classList.remove("no-scroll"); 
   };
 
   return (
