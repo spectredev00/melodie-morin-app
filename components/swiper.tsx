@@ -37,7 +37,7 @@ const ImageSlider: React.FC<ImageSliderProps> = ({ photos }) => {
           slidesPerView: 2,
         },
         1024: {
-          slidesPerView: 3,
+          slidesPerView: 2,
         },
       }}
       modules={[Navigation, Pagination, Autoplay]}
@@ -50,7 +50,7 @@ const ImageSlider: React.FC<ImageSliderProps> = ({ photos }) => {
               src={photo.img}
               alt={photo.alt}
               layout="fill"
-              objectFit="cover"
+              objectFit="contain"
               className="image-slider__image"
             />
           </div>

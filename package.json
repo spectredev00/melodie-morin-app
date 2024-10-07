@@ -14,7 +14,7 @@
     "aos": "^2.3.4",
     "i18next": "^23.12.1",
     "i18next-browser-languagedetector": "^8.0.0",
-    "next": "14.2.5",
+    "next": "^14.2.14",
     "next-i18next": "^15.3.0",
     "prettier": "^3.3.3",
     "react": "^18",

@@ -22,10 +22,6 @@ export default function Home() {
 
   const localPhotos = [
     {
-      img: "https://res.cloudinary.com/djluqpaas/image/upload/v1727898792/melodie/n8k0uffcisfzmiqa4xzj.jpg",
-      alt: "Mélo Morin - Mélodie Morin Danseuse",
-    },
-    {
       img: "https://res.cloudinary.com/djluqpaas/image/upload/v1727898791/melodie/cv4y4lvyb49z1yen6pap.jpg",
       alt: "Mélo Morin - Mélodie Morin Danseuse",
     },
@@ -83,18 +79,16 @@ export default function Home() {
       <AboutSection />
       <ImageSlider photos={localPhotos} />
       <Prix />
-      <section id="video" className={`video-section`}>
-        <div className="video-section__preview">
+      <section className="image">
           <Image
             src="/images/prix.jpg"
-            alt="Mélodie et Stéphane Morin en competition"
-            title="Mélodie et Stéphane Morin en compétition"
+            alt="Mélodie prix"
+            title="Mélodie prix"
             width={1000}
             height={700}
             objectFit="contain"
-            className="video-section__thumbnail"
+            className="image__prix"
           />
-        </div>
       </section>
       <Presences />
       <Gallery photos={photos} />
@@ -123,6 +117,17 @@ export default function Home() {
             {t.about2}
           </p>
         </div>
+      </section>
+      <section className="image">
+          <Image
+            src="/images/studio.jpg"
+            alt="Mélodie prix"
+            title="Mélodie prix"
+            width={1000}
+            height={700}
+            objectFit="contain"
+            className="image__prix"
+          />
       </section>
     </Layout>
   );

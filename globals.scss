@@ -628,3 +628,16 @@ p {
     opacity: 1;
   }
 }
+
+
+.image {
+  display: flex;
+  justify-content: center;
+
+  &__prix {
+    width: auto;
+    height: auto;
+    width: $with-fluid;
+    max-width: $max-width;
+  }
+}
